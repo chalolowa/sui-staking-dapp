@@ -33,7 +33,7 @@ const Hero = () => {
               <div className="space-y-4">
                 <div>
                   <Button
-                    className="w-full bg-blue-500 text-lg hover:bg-blue-800"
+                    className="w-full bg-blue-500 font-bold text-lg hover:bg-blue-800"
                     //onClick={() => AuthService.loginWithProvider("google")}
                   >
                     Sign in with Google
@@ -41,7 +41,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <Button
-                    className="w-full bg-green-500 text-lg hover:bg-green-800"
+                    className="w-full bg-green-500 font-bold text-lg hover:bg-green-800"
                     //onClick={() => AuthService.loginWithProvider("microsoft")}
                   >
                     Sign in with Microsoft

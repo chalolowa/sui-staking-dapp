@@ -109,6 +109,22 @@ export class AuthService {
         }
     }
 
+    static async logout() {
+        sessionStorage.removeItem("jwt_data");
+    }
+    
+    static async verifyAuth(jwt: string) {
+        try {
+            const decodedJwt = jwtDecode(jwt);
+            const isJwtValid = decodedJwt && decodedJwt.exp && Date.now() < decodedJwt.exp * 1000;
+            return isJwtValid;
+        } catch (error) {
+            console.error('JWT verification failed:', error);
+            return false;
+        }
+    }
+
+
     private static hashcode(s: string) {
         let h = 0, l = s.length, i = 0;
         if (l > 0) {
