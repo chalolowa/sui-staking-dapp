@@ -1,6 +1,8 @@
+"use client"
+
 import { Skeleton } from '@/components/ui/skeleton';
 import { AuthService } from '@/utils/authService';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Dashboard() {
