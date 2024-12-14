@@ -6,7 +6,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "./ui/command";
-import { Calendar, Smile, Calculator, User, Settings } from "lucide-react";
+import { Calendar, Smile, Calculator, User, Settings, Bitcoin, HistoryIcon, BitcoinIcon, TrendingUp } from "lucide-react";
 import sidebar from "@/public/sidebarbg.jpg";
 import Link from "next/link";
 
@@ -20,15 +20,15 @@ const Sidebar = () => {
         <CommandList>
           <CommandGroup className="text-white text-2xl" heading="Dashboard">
             <CommandItem>
-              <Calendar className="mr-2 h-4 w-4" />
+              <BitcoinIcon className="mr-2 h-4 w-4" />
               <Link href="/staking">Stake</Link>
             </CommandItem>
             <CommandItem>
-              <Smile className="mr-2 h-4 w-4" />
+              <HistoryIcon className="mr-2 h-4 w-4" />
               <Link href="/history">Transaction history</Link>
             </CommandItem>
             <CommandItem>
-              <Calculator className="mr-2 h-4 w-4" />
+              <TrendingUp className="mr-2 h-4 w-4" />
               <Link href="/stats">View stats</Link>
             </CommandItem>
           </CommandGroup>
